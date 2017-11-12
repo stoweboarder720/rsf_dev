@@ -1,0 +1,22 @@
+var http = require("http");
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "2ind3study5me!",
+  database: "mydb"
+});
+
+
+http.createServer(function(request, response) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+}).listen(8081);
+
+console.log('Server running at http://127.0.0.1:8081/');

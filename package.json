@@ -1,0 +1,17 @@
+{
+  "name": "readysetbackend",
+  "version": "1.0.0",
+  "description": "rsf",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mssql": "^4.0.4",
+    "mysql": "^2.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "clo006",
+  "license": "ISC"
+}
