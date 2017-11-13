@@ -24,6 +24,6 @@ var query = url_parts.query;
 	
 	response.end('Sauce people welcome you\n');
   //});
-}).listen(8081);
+}).listen(3000);
 
 console.log('Server running at http://127.0.0.1:8081/');

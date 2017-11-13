@@ -6,10 +6,10 @@ var express = require('express');
 var app = express(); 
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "2ind3study5me!",
-  database: "mydb"
+  host: "rsf.bucknell.edu",
+  user: "rsf_dev",
+  password: "uph5Eth3zien",
+  database: "rsf_dev"
 });
 
 
@@ -51,14 +51,14 @@ http.createServer(function(request, response, err) {
 	  response.end('have some bullshit\n'); 
   }
 
-}).listen(8081);
+}).listen(3000);
 
-app.post('/LEDon', function(request, response) {
-	console.log('LED BS FUNCTION CALLED'); 
-}).listen(8081); 
+//app.post('/LEDon', function(request, response) {
+//	console.log('LED BS FUNCTION CALLED'); 
+//}).listen(4000); 
 
-app.get('/LEDon', function(request, response) {
-	console.log('LED BS FUNCTION CALLED 2'); 
-}).listen(8081); 
+//app.get('/LEDon', function(request, response) {
+//	console.log('LED BS FUNCTION CALLED 2'); 
+//}).listen(4000); 
 
 console.log('Server running at http://127.0.0.1:8081/');
