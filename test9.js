@@ -43,7 +43,7 @@ app.post('/form', function(req, res){
     //debugging output for the terminal
     console.log('you posted: First Name: ' + req.body.firstName + ', Last Name: ' + req.body.lastName);
 	
-  var url_parts = url.parse(request.url, true);
+  var url_parts = url.parse(req.url, true);
   var query = url_parts.query; 
   var sql = "INSERT INTO customers (name, address) VALUES ('" + req.body.firstName + "', '" + req.body.lastName + "')";
   con.query(sql, function (err, result) {
