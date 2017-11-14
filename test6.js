@@ -12,6 +12,9 @@ var con = mysql.createConnection({
   database: "rsf_dev"
 });
 
+app.post('/LEDon', function(request, response) {
+	console.log('LED BS FUNCTION CALLED'); 
+}) 
 
 http.createServer(function(request, response, err) {
   if (err) throw err;
@@ -51,11 +54,7 @@ http.createServer(function(request, response, err) {
 	  response.end('have some bullshit\n'); 
   }
 
-}).listen(3000);
-
-app.post('/LEDon', function(request, response) {
-	console.log('LED BS FUNCTION CALLED'); 
-}) 
+}).listen(4000);
 
 app.get('/LEDon', function(request, response) {
 	console.log('LED BS FUNCTION CALLED 2'); 
