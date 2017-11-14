@@ -12,7 +12,7 @@ var con = mysql.createConnection({
   database: "rsf_dev"
 });
 
-app.post('/LEDon', function(req, res) {
+app.get('/LEDon', function(req, res) {
 	console.log('LED BS FUNCTION CALLED');
     res.end('complete\n'); 	
 }); 
