@@ -28,6 +28,17 @@ app.use(express.static(path.join(__dirname, 'www')));
 
 //tell express what to do when the /about route is requested
 app.post('/form', function(req, res){
+  var url_parts = url.parse(req.url, true);
+  var query = url_parts.query; 
+  var sql = "INSERT INTO customers (name, address) VALUES ('"+req.body.firstName+"', '"+req.body.lastName+"')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+	console.log(query); 
+  });
+	
+	
+	
     res.setHeader('Content-Type', 'application/json');
 
     //mimic a slow network connection
@@ -42,16 +53,6 @@ app.post('/form', function(req, res){
 
     //debugging output for the terminal
     console.log('you posted: First Name: ' + req.body.firstName + ', Last Name: ' + req.body.lastName);
-	
-  var url_parts = url.parse(req.url, true);
-  var query = url_parts.query; 
-  var sql = "INSERT INTO customers (name, address) VALUES ('" + req.body.firstName + "', '" + req.body.lastName + "')";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-	console.log(query); 
-	  response.writeHead(200, {'Content-type': 'text/plain'});
-  });
 	
 	
 });
