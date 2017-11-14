@@ -53,12 +53,12 @@ http.createServer(function(request, response, err) {
 
 }).listen(3000);
 
-//app.post('/LEDon', function(request, response) {
-//	console.log('LED BS FUNCTION CALLED'); 
-//}).listen(4000); 
+app.post('/LEDon', function(request, response) {
+	console.log('LED BS FUNCTION CALLED'); 
+}) 
 
-//app.get('/LEDon', function(request, response) {
-//	console.log('LED BS FUNCTION CALLED 2'); 
-//}).listen(4000); 
+app.get('/LEDon', function(request, response) {
+	console.log('LED BS FUNCTION CALLED 2'); 
+}) 
 
 console.log('Server running at http://127.0.0.1:8081/');
