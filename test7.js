@@ -14,10 +14,14 @@ var con = mysql.createConnection({
 
 app.post('/LEDon', function(request, response) {
 	console.log('LED BS FUNCTION CALLED'); 
-}) 
+}); 
+
+app.get('', function (req, res) {
+	res.end('welcome\n'); 
+}); 
 
 var server = app.listen(3000, function() {
 	var host = server.address().address
 	var port = server.address().port 
 	console.log("test app listening at https://%s:%s", host, port)
-})
+}); 
