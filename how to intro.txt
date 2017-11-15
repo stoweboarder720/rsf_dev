@@ -1,0 +1,27 @@
+3 hours - 9/5
+
+SQL ROOT PASS: 2ind3study5me!
+
+Setup Steps:
+
+1. install node.js
+2. install mysql server
+3. install mysql workbench (helpful)
+4. install node.js mysql tools 
+5. ran some test scripts to add database/table/entry to SQL server
+6. trying to understand how to call these scripts via URL from client 
+	-currently trying to use socket.io to solve the issue 
+	-unsure if i'm tackling the problem correctly? perhaps simpler way 
+
+LINUX LOGIN: 
+user: rsf
+pass: cupd1vmliteq
+
+DB:
+db name: rsf
+user = rsf
+pass = Gai8cahfaiKo
+
+name: rsf_dev
+user: rsf_dev
+pass: uph5Eth3zien
